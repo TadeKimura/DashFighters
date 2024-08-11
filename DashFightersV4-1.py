@@ -1,7 +1,7 @@
 import pyxel
 import random
 
-# https://kitao.github.io/pyxel/wasm/launcher/?run=TadeKimura.DashFighters.DashFightersV4
+# https://kitao.github.io/pyxel/wasm/launcher/?run=TadeKimura.DashFighters.DashFightersV4-1
 
 #========== CLASS ==========#
 class Game: #現在のゲーム状況にまつわる情報の保存
@@ -134,7 +134,7 @@ class Player: #　プレイヤーに関するプログラムが全て含まれ�
                     Player.isGrounded = True
                     Player.canJump = False
 
-            elif b.x + b.l <= Player.x <= b.x + b.l+4 and Player.isGrounded: #プレイヤーが建物のより、２px以上８px以下右に行った場合実行。
+            elif b.x + b.l <= Player.x <= b.x + b.l+4+Game.SPEED and Player.isGrounded: #プレイヤーが建物のより、２px以上８px以下右に行った場合実行。
                 Player.isGrounded = False
                 Player.canJump = False
 

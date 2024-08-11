@@ -1,7 +1,7 @@
 import pyxel
 import random
 
-# https://kitao.github.io/pyxel/wasm/launcher/?run=TadeKimura.DashFighters.DashFightersV4-1
+# https://kitao.github.io/pyxel/wasm/launcher/?run=TadeKimura.DashFighters.DashFightersV4-2
 
 #========== CLASS ==========#
 class Game: #現在のゲーム状況にまつわる情報の保存

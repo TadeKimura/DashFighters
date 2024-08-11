@@ -9,7 +9,7 @@ class Game: #現在のゲーム状況にまつわる情報の保存
     isSelecting = False
     isOver = False
     
-    SPEED = 40
+    SPEED = 1.5
 
     ENEMYPOINTS = 100
 

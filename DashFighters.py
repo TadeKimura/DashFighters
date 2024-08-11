@@ -536,7 +536,7 @@ class StartScreen:
         pyxel.blt(72,50, 2, 0, 176, 32, 16, 6)
         pyxel.blt(104,50, 2, 0, 192, 32, 16, 6)
 
-        pyxel.text(66,136, 'CREATED BY TAKUYA.K', 7)
+        pyxel.text(66,136, 'CREATED BY TADE.K', 7)
         pyxel.blt(72,92, 2, Button.press(72,92,64,16, 32, pyxel.KEY_P, True),48, 64,16, 6)
         pyxel.blt(72,108, 2, Button.press(72,108,64,16, 32, pyxel.KEY_Q, True),64, 64,16, 6)
 

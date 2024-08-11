@@ -69,7 +69,7 @@ class Building: # 建てものに関するプログラムが全て含まれて�
     
     def autogen(): #次の建物の種類、バリエーションと位置を定義するメソッド. 敵も、建物の一部として保存。
         for b in buildings:
-            b.x += -2 * Game.SPEED #ゲームの進行状況により、スピードを上げるかも？
+            b.x += -1 * Game.SPEED #ゲームの進行状況により、スピードを上げるかも？
 
         for i in range(len(buildings)):
             if buildings[i].x <= -80: # 建物のx座標が-80になったとき実行

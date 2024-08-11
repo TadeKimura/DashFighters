@@ -1,6 +1,7 @@
 import pyxel
 import random
 
+# https://kitao.github.io/pyxel/wasm/launcher/?run=TadeKimura.DashFighters.DashFighters
 
 #========== CLASS ==========#
 class Game: #現在のゲーム状況にまつわる情報の保存
@@ -8,7 +9,7 @@ class Game: #現在のゲーム状況にまつわる情報の保存
     isSelecting = False
     isOver = False
     
-    SPEED = 1.5
+    SPEED = 1.0
 
     ENEMYPOINTS = 100
 

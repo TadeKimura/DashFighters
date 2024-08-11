@@ -457,7 +457,7 @@ class Wand:
 
     def update():
         for i in emeralds:
-            i.x -= 2 - Game.SPEED
+            i.x -= 2 + Game.SPEED
             if i.x < -16:
                 emeralds.remove(i)
         

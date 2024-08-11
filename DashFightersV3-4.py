@@ -187,7 +187,7 @@ class Player: #　プレイヤーに関するプログラムが全て含まれ�
         if Player.score % 1000 == 0 and Game.level != 1 or Player.score == 1000:
             if Game.level < 10:
                 Game.level += 1
-                Game.SPEED += 1
+                Game.SPEED += 0.2
 
             else:
                 Game.level += 1

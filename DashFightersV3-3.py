@@ -1,7 +1,7 @@
 import pyxel
 import random
 
-# https://kitao.github.io/pyxel/wasm/launcher/?run=TadeKimura.DashFighters.DashFightersV3-1
+# https://kitao.github.io/pyxel/wasm/launcher/?run=TadeKimura.DashFighters.DashFightersV3-3
 
 #========== CLASS ==========#
 class Game: #現在のゲーム状況にまつわる情報の保存
@@ -9,7 +9,7 @@ class Game: #現在のゲーム状況にまつわる情報の保存
     isSelecting = False
     isOver = False
     
-    SPEED = 1
+    SPEED = 0
 
     ENEMYPOINTS = 100
 
@@ -69,7 +69,7 @@ class Building: # 建てものに関するプログラムが全て含まれて�
     
     def autogen(): #次の建物の種類、バリエーションと位置を定義するメソッド. 敵も、建物の一部として保存。
         for b in buildings:
-            b.x += -2 * Game.SPEED #ゲームの進行状況により、スピードを上げるかも？
+            b.x += -2 + Game.SPEED #ゲームの進行状況により、スピードを上げるかも？
 
         for i in range(len(buildings)):
             if buildings[i].x <= -80: # 建物のx座標が-80になったとき実行
@@ -89,11 +89,11 @@ class Building: # 建てものに関するプログラムが全て含まれて�
 
     def gap(a,b): # 建物と建物の間をランダムに設定。ただし無理ゲーになっては行けないので、場合わけされてます
         if a > b: # 前の建物が小さい場合、最大に出てくる数値が32px のギャップです
-            return random.randint(0,2)* 12 * Game.SPEED
+            return random.randint(0,2)* 12 + Game.SPEED
         if a == b:
-            return random.randint(0,1)*24 * Game.SPEED
+            return random.randint(0,1)*24 + Game.SPEED
         else: # そのほかは、0~48 のギャップが出ます。
-            return random.randint(0,2)*16 * Game.SPEED
+            return random.randint(0,2)*16 + Game.SPEED
 
     def update(): # 建物のx座標を徐々に左に動かす
         Building.autogen()
@@ -332,7 +332,7 @@ class Enemy:
 
     def update():
         for e in enemies:
-            e.x += -2 * Game.SPEED
+            e.x += -2 + Game.SPEED
 
     def draw():
         for e in enemies:
@@ -365,7 +365,7 @@ class Chip:
 
     def update():
         for c in chips:
-            c.x += -2 * Game.SPEED
+            c.x += -2 + Game.SPEED
 
     def draw():
         for c in chips:
@@ -457,7 +457,7 @@ class Wand:
 
     def update():
         for i in emeralds:
-            i.x -= 2 * Game.SPEED
+            i.x -= 2 + Game.SPEED
             if i.x < -16:
                 emeralds.remove(i)
         

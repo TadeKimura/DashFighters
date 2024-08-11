@@ -1,7 +1,7 @@
 import pyxel
 import random
 
-# https://kitao.github.io/pyxel/wasm/launcher/?run=TadeKimura.DashFighters.DashFightersV3-5
+# https://kitao.github.io/pyxel/wasm/launcher/?run=TadeKimura.DashFighters.DashFightersV4
 
 #========== CLASS ==========#
 class Game: #現在のゲーム状況にまつわる情報の保存
@@ -607,18 +607,21 @@ class GameOverCard:
         if Button.press(120,94,16,16, 0, pyxel.KEY_P, False):
             Game.reset()
             Game.isOver = False
+            Game.SPEED = 0
             pyxel.play(0,9)
         elif Button.press(96,94,16,16, 0, pyxel.KEY_C, False):
             Game.reset()
             Game.isOver = False
             Game.isPlaying = False
             Game.isSelecting = True
+            Game.SPEED = 0
             pyxel.play(0,11)
         elif Button.press(72,94,16,16, 0, pyxel.KEY_Q, False):
             Game.reset()
             Game.isOver = False
             Game.isPlaying = False
             Game.isSelecting = False
+            Game.SPEED = 0
             pyxel.play(0,10)
 
 

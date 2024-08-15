@@ -658,7 +658,7 @@ class App:
 
     #========== メソッド ===========# 
     def __init__(self):
-        pyxel.init(208,144, title="DASH FIGHTERS", fps=24) # Pyxel 画面のサイズとフレームレートの設定と #
+        pyxel.init(208,144, title="DASH FIGHTERS") # Pyxel 画面のサイズとフレームレートの設定と #
         pyxel.load("Assets.pyxres") # アセットの読み込み
         pyxel.run(self.update, self.draw) # アップデートとドローの繰り返し
 
